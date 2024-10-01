@@ -316,6 +316,7 @@ DEPENDENCIES
   capybara
   debug
   importmap-rails
+  irb
   jbuilder
   lookbook
   puma (>= 5.0)

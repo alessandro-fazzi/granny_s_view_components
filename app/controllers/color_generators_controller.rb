@@ -1,9 +1,8 @@
 class ColorGeneratorsController < ApplicationController
   def show
-    initial_color = "#FFFFFF"
     respond_to do |format|
       format.html do
-        render "show", locals: { color: initial_color }
+        render "show"
       end
     end
   end
@@ -13,7 +12,7 @@ class ColorGeneratorsController < ApplicationController
 
     respond_to do |format|
       format.turbo_stream do
-        render "show", locals: { color: random_color }
+        render "show", locals: { color: random_color, color_ids: params.require(:color_ids) }
       end
     end
   end
